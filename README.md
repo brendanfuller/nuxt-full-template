@@ -1,6 +1,6 @@
 # nuxt-full-template 
 
-This is a [sidebase merino](https://sidebase.io/) template with a few extra modifications.
+This is a [Sidebase](https://sidebase.io/) template with a few extra modifications.
 
 - [Nuxt](https://nuxt.com) for the all in one VueJS framework
 - [AuthJS](https://authjs.dev) for authorization and authentication
@@ -8,7 +8,7 @@ This is a [sidebase merino](https://sidebase.io/) template with a few extra modi
 - [Postgres](https://www.postgresql.org/) as the database of choice
 - [TailwindCSS](https://tailwindcss.com) as the styling library
 - [TRPc](https://trpc.io) for type-safe APIs
-- [Docker](https://www.docker.com/) for local development and deployment
+- [Docker](https://www.docker.com/) used for running the database
 
 ## Differences form the default sidebase template
 - Enables [Nuxt 3 devtools](https://github.com/nuxt/devtools#installation)
@@ -18,7 +18,7 @@ This is a [sidebase merino](https://sidebase.io/) template with a few extra modi
 - Adds [vitepress](https://vitepress.dev) in `/docs` for project documentation
 - Includes extra extensions for development, like Todo Tree
 
-## How to get going?
+## Installation
 
 1. Node 18+ installed.
 2. Yarn installed: `npm i yarn -g`
@@ -28,16 +28,16 @@ This is a [sidebase merino](https://sidebase.io/) template with a few extra modi
     - Linux requires [docker-engine](https://docs.docker.com/engine/install/) to be installed. Check your local package manager for more information.
 6. Clone the repository
 7. Install any packages via `yarn`
-8. Go into `/docker` directory and run `docker-compose up -d` (this will run the postgress database)
-9. After the database is online, run the Nuxt Application: `yarn dev`
+8. Go into `/docker` directory and run `docker-compose up -d` which will run **postgres**
+9. After the database is online, run the application `yarn dev`
 
 
-## Configuration 
+## Thing to learn/change 
 
 Some tasks you should probably do in the beginning are:
 - [ ] Prisma: Edit your `prisma/prisma.schema` to your liking
 - [ ] Auth: Configure your auth providers to the [NuxtAuthHandler](./server/api/auth/[...].ts)
-- [ ] Disable typescript builtins via [Volar Takeover Mode](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
+- [ ] Disable typescript built-ins via [Volar Takeover Mode](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
 - [ ] vitepress: An additional port may need to be open when using the devcontainer for documentation, thus can be done in the bottom section of VSCode named **ports**. 
 
 ## Production
